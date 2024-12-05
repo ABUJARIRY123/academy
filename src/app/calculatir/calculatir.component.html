@@ -1,0 +1,71 @@
+<div class="calculator-container">
+    <div class="input-section">
+      <input 
+        type="number" 
+        [(ngModel)]="input1" 
+        (ngModelChange)="calculateResults()"
+        data-test-id="app-input1"
+        placeholder="Enter first number"
+      >
+      
+      <label data-test-id="selected-operator">
+        {{ currentOperation }}
+      </label>
+      
+      <input 
+        type="number" 
+        [(ngModel)]="input2" 
+        (ngModelChange)="calculateResults()"
+        data-test-id="app-input2"
+        placeholder="Enter second number"
+      >
+    </div>
+  
+    <div class="operation-buttons">
+      <button 
+        (click)="selectOperation('+')"
+        data-test-id="addButton"
+      >
+        +
+      </button>
+      <button 
+        (click)="selectOperation('-')"
+        data-test-id="subtractButton"
+      >
+        -
+      </button>
+      <button 
+        (click)="selectOperation('*')"
+        data-test-id="multiplyButton"
+      >
+        *
+      </button>
+      <button 
+        (click)="selectOperation('/')"
+        data-test-id="divideButton"
+      >
+        /
+      </button>
+    </div>
+  
+    <div 
+      *ngIf="totalOperations > 0" 
+      data-test-id="total-operations"
+    >
+      Total Operations: {{ totalOperations }}
+    </div>
+  
+    <div 
+      *ngIf="result !== null" 
+      data-test-id="result"
+    >
+      Result: {{ result }}
+    </div>
+  
+    <button 
+      (click)="resetCalculator()"
+      data-test-id="resetButton"
+    >
+      Reset
+    </button>
+  </div>

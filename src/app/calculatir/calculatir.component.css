@@ -1,0 +1,32 @@
+/* calculator.component.css */
+.calculator-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input-section input {
+    width: 40%;
+    padding: 10px;
+  }
+  
+  .operation-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
